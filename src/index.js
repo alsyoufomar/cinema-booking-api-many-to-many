@@ -18,10 +18,12 @@ app.use(express.urlencoded({ extended: true }));
 
 // Add your router below
 
+const ticketRouter = require('./routers/ticket');
+app.use('/ticket', ticketRouter)
 
 
-
-
+const screenRouter = require('./routers/screens');
+app.use('/screen', screenRouter)
 
 
 // Set up a default "catch all" route to use when someone visits a route
